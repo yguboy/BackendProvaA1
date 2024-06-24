@@ -105,6 +105,4 @@ app.MapGet("/tarefas/concluidas", ([FromServices] AppDataContext ctx) =>
     return Results.NotFound("Nenhuma tarefa concluída encontrada");
 });
 
-
-
 app.Run();
