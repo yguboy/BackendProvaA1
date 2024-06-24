@@ -5,6 +5,21 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDataContext>();
 
+//Registrar o serviço de banco de dados na aplicação
+builder.Services.AddDbContext<AppDataContext>();
+
+//Builder que libera as credencias de qualquer origem para conectar com o front
+builder.Services.AddCors(
+    options =>
+    {
+        options.AddPolicy("AcessoTotal",
+            builder => builder.
+                AllowAnyOrigin().
+                AllowAnyHeader().
+                AllowAnyMethod());
+    }
+);
+
 var app = builder.Build();
 
 
