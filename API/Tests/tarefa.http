@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ### Alterar o status de uma tarefa
-PATCH http://localhost:5000/tarefas/alterar/2f1b7dc1-3b9a-4e1a-a389-7f5d2f1c8f3e
+PATCH http://localhost:5000/tarefas/alterar/6a8b3e4d-5e4e-4f7e-bdc9-9181e456ad0e
 
 ### Listar tarefas não concluídas
 GET http://localhost:5000/tarefas/naoconcluidas
